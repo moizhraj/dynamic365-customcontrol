@@ -80,7 +80,7 @@ export class HtmlEditorControl implements ComponentFramework.StandardControl<IIn
 
 
 		ClassicEditor
-			.create( document.querySelector( '.' + context.parameters.FieldName + '-editor-control' ), {
+			.create( this.textareaElement, {
 				extraPlugins: [ this.editorUploadAdapterPlugin ],
 			})
 			.then( (editor: any) => {
