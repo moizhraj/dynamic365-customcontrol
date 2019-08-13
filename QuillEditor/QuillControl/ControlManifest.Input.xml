@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="Microsoft.Cseo.Fmcs.Elite" constructor="QuillControl" version="0.0.1" display-name-key="Quill RTE Control" description-key="Quill Rich Text Editor Control" control-type="standard">
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="field" display-name-key="Bound Field" description-key="Bound Field" of-type-group="fieldtypes" usage="bound" required="true" />
+    <type-group name="fieldtypes"> 
+      <type>SingleLine.TextArea</type>
+      <type>Multiple</type>
+    </type-group>
+    <property name="imageUploadServiceUrl" display-name-key="Image Upload Service URL" description-key="Image Upload Service URL" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="videoUploadServiceUrl" display-name-key="Video Upload Service URL" description-key="Video Upload Service URL" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="enableImages" display-name-key="Enable Images" description-key="Enable Images" of-type="Enum" usage="input" required="false" >
+      <value name="No" display-name-key="No" description-key="To_No" default="true">No</value>
+      <value name="Yes" display-name-key="Yes" description-key="To_Yes">Yes</value>   
+    </property>
+    <property name="enableVideo" display-name-key="Enable Videos" description-key="Enable Videos" of-type="Enum" usage="input" required="false" >
+      <value name="No" display-name-key="No" description-key="To_No" default="true">No</value>
+      <value name="Yes" display-name-key="Yes" description-key="To_Yes">Yes</value>   
+    </property>
+    <!-- 
+      Property node's of-type attribute can be of-type-group attribute. 
+      Example:
+      <type-group name="numbers">
+        <type>Whole.None</type>
+        <type>Currency</type>
+        <type>FP</type>
+        <type>Decimal</type>
+      </type-group>
+      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+    -->
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="../node_modules/quill/dist/quill.core.css" order="1" />
+      <css path="../node_modules/quill/dist/quill.snow.css" order="1" />
+      <css path="../node_modules/quill/dist/quill.bubble.css" order="1" />
+      <css path="css/quill-control.css" order="1" />
+      <img path="resources/control-preview.jpg" />
+      <!-- UNCOMMENT TO ADD MORE RESOURCES
+      <css path="css/QuillControl.css" order="1" />
+      <resx path="strings/QuillControl.1033.resx" version="1.0.0" />
+      -->
+    </resources>
+    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+    -->
+  </control>
+</manifest>

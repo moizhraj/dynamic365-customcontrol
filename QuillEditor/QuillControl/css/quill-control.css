@@ -1,0 +1,22 @@
+.Microsoft.Cseo.Fmcs.Elite\.RichTextControl{
+    min-width: 300px;
+ }
+ 
+ .Microsoft.Cseo.Fmcs.Elite\.RichTextControl .ql-toolbar.ql-snow{
+     padding:0px !important;
+     background: #eee;
+  }
+  .Microsoft.Cseo.Fmcs.Elite\.RichTextControl .ql-editor{
+      min-height: 150px;
+  }
+  .Microsoft.Cseo.Fmcs.Elite\.RichTextControl .ql-snow .ql-picker-label {
+     padding-left: 4px;
+     
+  }
+  .Microsoft.Cseo.Fmcs.Elite\.RichTextControl .ql-toolbar.ql-snow .ql-formats{
+     margin-right:0px;
+     text-align: left;
+  }
+  .Microsoft.Cseo.Fmcs.Elite\.RichTextControl .ql-container.ql-snow.ql-disabled{
+    border-top: 1px solid #ccc;
+  }
