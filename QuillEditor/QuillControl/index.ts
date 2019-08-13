@@ -39,6 +39,7 @@ export class QuillControl implements ComponentFramework.StandardControl<IInputs,
 				"code-block",
 				//{ "handlers": { "image": this.imageHandler } },
 				"image",
+				"video"
 			]
 		}
 	}
@@ -85,21 +86,16 @@ export class QuillControl implements ComponentFramework.StandardControl<IInputs,
 		this._context = context;
 		this._notifyOutputChanged = notifyOutputChanged;
 
-		if(context.parameters.enableImages!.raw == "Yes") {
-			this._toolbarOptions.toolbar[0].push("image");
-		}
-		if(context.parameters.enableVideo!.raw == "Yes") {
-			this._toolbarOptions.toolbar[0].push("video");
-		}
+		// if(context.parameters.enableImages!.raw == "Yes") {
+		// 	this._toolbarOptions.toolbar[0].push("image");
+		// }
+		// if(context.parameters.enableVideo!.raw == "Yes") {
+		// 	this._toolbarOptions.toolbar[0].push("video");
+		// }
 
 		this._container = document.createElement("div");
 		this._editorContainer = document.createElement("div");
 		this._container.appendChild(this._editorContainer);
-		// this._fileInput = document.createElement("input");
-		// this._fileInput.setAttribute('type', "file");
-		// this._fileInput.setAttribute('accept', 'image/png, image/gif, image/jpeg, image/bmp, image/x-icon');
-		// this._fileInput.classList.add('ql-image');
-		// this._fileInput.addEventListener("change", this.imageHandler);
 		this._editor = new Quill(this._editorContainer, {
 			modules: this._toolbarOptions,
 			theme: 'snow',

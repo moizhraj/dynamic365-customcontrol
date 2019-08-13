@@ -8,15 +8,15 @@
       <type>Multiple</type>
     </type-group>
     <property name="imageUploadServiceUrl" display-name-key="Image Upload Service URL" description-key="Image Upload Service URL" of-type="SingleLine.Text" usage="input" required="false" />
-    <property name="videoUploadServiceUrl" display-name-key="Video Upload Service URL" description-key="Video Upload Service URL" of-type="SingleLine.Text" usage="input" required="false" />
-    <property name="enableImages" display-name-key="Enable Images" description-key="Enable Images" of-type="Enum" usage="input" required="false" >
+    <!-- <property name="videoUploadServiceUrl" display-name-key="Video Upload Service URL" description-key="Video Upload Service URL" of-type="SingleLine.Text" usage="input" required="false" /> -->
+    <!-- <property name="enableImages" display-name-key="Enable Images" description-key="Enable Images" of-type="Enum" usage="input" required="false" >
       <value name="No" display-name-key="No" description-key="To_No" default="true">No</value>
       <value name="Yes" display-name-key="Yes" description-key="To_Yes">Yes</value>   
     </property>
     <property name="enableVideo" display-name-key="Enable Videos" description-key="Enable Videos" of-type="Enum" usage="input" required="false" >
       <value name="No" display-name-key="No" description-key="To_No" default="true">No</value>
       <value name="Yes" display-name-key="Yes" description-key="To_Yes">Yes</value>   
-    </property>
+    </property> -->
     <!-- 
       Property node's of-type attribute can be of-type-group attribute. 
       Example:
